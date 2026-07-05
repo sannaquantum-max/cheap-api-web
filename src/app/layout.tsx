@@ -26,7 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-6xl mx-auto px-4">
             <p>© {new Date().getFullYear()} CheapAPI. All rights reserved.</p>
             <p className="mt-1">
-              Powered by DeepSeek · Qwen · GLM · Doubao |{" "}
+              <a href="/terms" className="text-brand hover:underline">Terms</a> ·{" "}
+              <a href="/privacy" className="text-brand hover:underline">Privacy</a> ·{" "}
+              <a href="/refund" className="text-brand hover:underline">Refunds</a> |{" "}
               <a href="/docs" className="text-brand hover:underline">Docs</a> ·{" "}
               <a href="/pricing" className="text-brand hover:underline">Pricing</a>
             </p>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import PaddleCheckout from "@/components/PaddleCheckout";
 
 const plans = [
   {
@@ -9,6 +9,7 @@ const plans = [
     rate: "100 req/min",
     support: "Email (24h)",
     highlight: false,
+    paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_STARTER || "pri_starter",
   },
   {
     name: "Pro",
@@ -18,6 +19,7 @@ const plans = [
     rate: "300 req/min",
     support: "Priority email",
     highlight: true,
+    paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_PRO || "pri_pro",
   },
   {
     name: "Team",
@@ -27,6 +29,7 @@ const plans = [
     rate: "1,000 req/min",
     support: "Slack + email <4h",
     highlight: false,
+    paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_TEAM || "pri_team",
   },
   {
     name: "Enterprise",
@@ -36,6 +39,7 @@ const plans = [
     rate: "Custom",
     support: "24/7 dedicated",
     highlight: false,
+    paddlePriceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_ENTERPRISE || "pri_enterprise",
   },
 ];
 
@@ -91,8 +95,9 @@ export default function Pricing() {
                 <span className="text-text-muted">{p.support}</span>
               </li>
             </ul>
-            <Link
-              href={`https://cheap-api.lemonsqueezy.com/checkout/buy/${p.name.toLowerCase()}`}
+            <PaddleCheckout
+              priceId={p.paddlePriceId}
+              planName={p.name}
               className={`block text-center py-2.5 rounded-lg font-semibold text-sm transition-colors ${
                 p.highlight
                   ? "bg-brand hover:bg-brand-dark text-white"
@@ -100,7 +105,7 @@ export default function Pricing() {
               }`}
             >
               Get {p.name}
-            </Link>
+            </PaddleCheckout>
           </div>
         ))}
       </div>
