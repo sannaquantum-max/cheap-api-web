@@ -1,0 +1,2 @@
+:HL["/cheap-api-web/_next/static/chunks/3ih7mr3jqlz8a.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"IB_St1q0Ewq3Y_9C4BoUM"}
