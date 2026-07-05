@@ -76,8 +76,11 @@ export default function Docs() {
                 ["deepseek-reasoner", "DeepSeek-R1", "Math, logic, reasoning"],
                 ["qwen-max", "Alibaba Qwen-Max", "Multilingual, enterprise"],
                 ["qwen-plus", "Alibaba Qwen-Plus", "Balanced perf/cost"],
-                ["glm-4", "Zhipu GLM-4", "Cheapest, good quality"],
-                ["glm-4-flash", "Zhipu GLM-4 Flash", "Lightweight tasks"],
+                ["doubao-pro", "ByteDance Doubao-Pro", "Fast, ultra-cheap"],
+                ["doubao-lite", "ByteDance Doubao-Lite", "Lightweight, cheapest"],
+                ["glm-4", "Zhipu GLM-4", "General purpose, great value"],
+                ["glm-4-flash", "Zhipu GLM-4 Flash", "Lightweight, free tier"],
+                ["kimi", "Moonshot Kimi", "Long context 128K, documents"],
               ].map(([id, provider, best]) => (
                 <tr key={id} className="border-b border-white/5">
                   <td className="py-3 px-4 font-mono text-sm text-brand">{id}</td>
@@ -95,29 +98,12 @@ export default function Docs() {
         <h2 className="text-xl font-semibold mb-4">API Endpoints</h2>
         <div className="space-y-4">
           {[
-            {
-              method: "POST",
-              path: "/v1/chat/completions",
-              desc: "Chat completions (OpenAI-compatible)",
-            },
-            {
-              method: "GET",
-              path: "/v1/models",
-              desc: "List available models",
-            },
-            {
-              method: "GET",
-              path: "/health",
-              desc: "Health check",
-            },
+            { method: "POST", path: "/v1/chat/completions", desc: "Chat completions (OpenAI-compatible)" },
+            { method: "GET", path: "/v1/models", desc: "List available models" },
+            { method: "GET", path: "/health", desc: "Health check" },
           ].map((e) => (
-            <div
-              key={e.path}
-              className="bg-surface-light border border-white/10 rounded-lg p-4 flex items-center gap-4"
-            >
-              <span className="bg-brand/20 text-brand px-2 py-0.5 rounded text-xs font-mono font-bold">
-                {e.method}
-              </span>
+            <div key={e.path} className="bg-surface-light border border-white/10 rounded-lg p-4 flex items-center gap-4">
+              <span className="bg-brand/20 text-brand px-2 py-0.5 rounded text-xs font-mono font-bold">{e.method}</span>
               <code className="text-sm">{e.path}</code>
               <span className="text-text-muted text-sm ml-auto">{e.desc}</span>
             </div>

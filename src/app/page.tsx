@@ -5,6 +5,7 @@ const models = [
   { name: "Qwen-Max", price: "$0.40 / $1.20", quality: "GPT-4o", savings: "8x" },
   { name: "GLM-4", price: "$0.14 / $0.14", quality: "GPT-4 Turbo", savings: "20x" },
   { name: "Doubao-Pro", price: "$0.11 / $0.28", quality: "GPT-4o-mini", savings: "25x" },
+  { name: "Kimi", price: "$0.21 / $0.83", quality: "GPT-4o (128K)", savings: "12x" },
 ];
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-4 pt-24 pb-16 text-center">
         <div className="inline-flex items-center gap-2 bg-brand/10 text-brand px-4 py-1.5 rounded-full text-sm mb-6">
-          🔥 Now serving 4 Chinese AI models through one API
+          🔥 Now serving 5 Chinese AI models through one API
         </div>
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
           Same AI Quality.
@@ -21,7 +22,7 @@ export default function Home() {
           <span className="text-brand">10x Cheaper.</span>
         </h1>
         <p className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          One API key. Four models. Zero lock-in. Just change your{" "}
+          One API key. Five models. Zero lock-in. Just change your{" "}
           <code className="bg-surface-light px-1.5 py-0.5 rounded text-brand text-sm">base_url</code>{" "}
           and start saving $100s every month.
         </p>

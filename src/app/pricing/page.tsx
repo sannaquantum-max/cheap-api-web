@@ -80,7 +80,7 @@ export default function Pricing() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand mt-0.5">✓</span>
-                <span>All 4 models included</span>
+                <span>All 5 models included</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-brand mt-0.5">✓</span>
