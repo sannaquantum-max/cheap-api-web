@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/cheap-api-web",
+  // 移除 basePath，适配 cheap-api.io 域名
   images: {
     unoptimized: true,
   },
