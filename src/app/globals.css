@@ -1,6 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   --color-brand: #10b981;
   --color-brand-dark: #059669;
   --color-surface: #0f172a;
@@ -10,7 +12,7 @@
 }
 
 body {
-  background: var(--color-surface);
+  background-color: var(--color-surface);
   color: var(--color-text);
   font-family: system-ui, -apple-system, sans-serif;
 }
