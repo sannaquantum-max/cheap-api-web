@@ -32,6 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Fix symlinks in output
+        run: |
+          find ./out -type l -exec sh -c 'target=$(readlink "$0"); rm "$0"; cp -r "$(dirname "$0")/$target" "$0"' {} \;
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
